@@ -1,0 +1,3 @@
+-- Este script é executado apenas ao inicializar um diretório de dados PostgreSQL vazio.
+CREATE TABLE IF NOT EXISTS chamados (id SERIAL PRIMARY KEY, titulo VARCHAR(180) NOT NULL, solicitante VARCHAR(120) NOT NULL, prioridade VARCHAR(20) NOT NULL CHECK (prioridade IN ('Baixa','Média','Alta')), status VARCHAR(30) NOT NULL CHECK (status IN ('Aberto','Em andamento','Resolvido')), created_at TIMESTAMPTZ NOT NULL DEFAULT NOW());
+INSERT INTO chamados (titulo,solicitante,prioridade,status) VALUES ('Impressora não imprime','Ana Silva','Média','Aberto'),('Computador lento','João Costa','Baixa','Em andamento'),('Sem conexão de rede','Carla Souza','Alta','Aberto');

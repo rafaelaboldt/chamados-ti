@@ -1,0 +1,33 @@
+{
+  "title": "Central de Chamados de TI",
+  "subtitle": "Registre solicitações e acompanhe o atendimento técnico.",
+  "table": "chamados",
+  "icon": "🛠️",
+  "color": "#0891b2",
+  "fields": [
+    {
+      "name": "titulo",
+      "label": "Título do chamado",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "solicitante",
+      "label": "Solicitante",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "prioridade",
+      "label": "Prioridade",
+      "type": "select:Baixa|Média|Alta",
+      "required": true
+    },
+    {
+      "name": "status",
+      "label": "Status",
+      "type": "select:Aberto|Em andamento|Resolvido",
+      "required": true
+    }
+  ]
+}
